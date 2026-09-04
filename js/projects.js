@@ -2,34 +2,34 @@
 
 const projects = [
     {
+        name: 'TRMS AI CHATBOT',
+        type: 'RAG / FASTAPI',
+        pos: 'start',
+        image: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80&w=2370'
+    },
+    {
         name: 'NEXUS DATA CORE',
         type: 'SYSTEM DESIGN',
-        pos: 'start',
-        image: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3' 
-    },
-    {
-        name: 'THE AUTONOMOUS ANALYST',
-        type: 'AI RESEARCH',
         pos: 'mid',
-        image: 'https://images.unsplash.com/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=2952&q=80' 
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=2370'
     },
     {
-        name: 'ENTERPRISE ERP MODULES',
-        type: 'BACKEND',
+        name: 'IRISSET AI',
+        type: 'WEB CRAWLING / AI',
         pos: 'end',
-        image: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3'
+        image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=2370'
     },
     {
-        name: 'WASM RAG EXECUTION',
-        type: 'LAB EXP 4099',
+        name: 'AUTONOMOUS ANALYST',
+        type: 'AI REASONING',
         pos: 'mid',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2564&ixlib=rb-4.0.3' 
+        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2370'
     },
     {
-        name: 'DETERMINISTIC ROUTERS',
-        type: 'OPEN SOURCE',
+        name: 'WASM RAG',
+        type: 'LAB / EXPERIMENT',
         pos: 'start',
-        image: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3' 
+        image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=2370'
     }
 ]
 
@@ -44,6 +44,7 @@ const createProjects = () => {
         let image = document.createElement('img');
         image.classList.add('project__image');
         image.src = project.image;
+        image.alt = project.name;
 
         let projectDetails = document.createElement('div');
         projectDetails.classList.add('project__details');
@@ -71,17 +72,17 @@ const blogPosts = [
     {
         title: 'WHY YOUR RAG PIPELINE IS FAILING',
         time: '8 MIN',
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=2668&ixlib=rb-4.0.3' 
+        image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&q=80&w=2668'
     },
     {
-        title: 'ILLUSION OF THE 10X ENGINEER',
-        time: '5 MIN',
-        image: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3' 
+        title: 'ARCHITECTURE BEFORE INTELLIGENCE',
+        time: '6 MIN',
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2370'
     },
     {
-        title: 'MICROSERVICES TO MODULITHS',
-        time: '12 MIN',
-        image: 'https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3' 
+        title: 'DETERMINISTIC ROUTING IN AI APPS',
+        time: '7 MIN',
+        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=2602'
     }
 ]
 
@@ -99,6 +100,7 @@ const createBlogposts = () => {
         let image = document.createElement('img');
         image.classList.add('blog__post__img');
         image.src = post.image;
+        image.alt = post.title;
 
         let postDetails = document.createElement('div');
         postDetails.classList.add('post__details');
