@@ -20,6 +20,36 @@ body {
 	background: var(--second-color);
 }
 
+/* Navbar */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 70px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 40px;
+	z-index: 100;
+	background: rgba(10, 10, 10, 0.7);
+	backdrop-filter: blur(5px);
+}
+
+.navbar a {
+	color: var(--pr-color);
+	text-decoration: none;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--pr-color);
+}
+
 /******************************************/
 section {
 	padding-top: 150px;
