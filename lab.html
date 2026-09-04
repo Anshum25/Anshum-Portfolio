@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Anshum Dev | AI Engineer & Systems Architect</title>
+	<title>Lab — Anshum Dev | AI Experiments & Engineering Research</title>
+	<meta name="description" content="Anshum Dev's technical experiments — browser-side vector search, WASM RAG, edge LLM orchestration, self-healing pipelines, and AI architecture research.">
 	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,31 +31,23 @@
 
 		<!-- div .header -->
 		<header class="header">
-			<h1 class="title" data-splitting><span class="title_paralax">Building Intelligent Systems </span><span class="stroke">for Real Problems.</span></h1>
+			<h1 class="title" data-splitting><span class="title_paralax">The </span><span class="stroke">lab.</span></h1>
 			<div class="header__img">
-				<img src="img/1.jpg" alt="1">
+				<img src="img/5.jpg" alt="Anshum Dev Lab — Experiments">
 			</div>
 			<div class="header__marq">
 				<div class="header__marq-wrapp">
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">Experiments
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">Prototypes
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">Research
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">Edge Cases
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
 				</div>
 			</div>
@@ -67,7 +60,7 @@
 						<span class="section-title__square"></span>
 					</h2>
 					<p class="about__p" style="padding-right: 0; width: 100%;">
-						The bleeding edge. Production engineering is about stability, but innovation requires experimentation. This is where I test theoretical models before they hit production.
+						Production engineering is about stability. Innovation requires experimentation. This is where theoretical models are tested before they touch production — and where failures are as valuable as successes.
 					</p>
 				</div>
 			</section>
@@ -75,22 +68,83 @@
 			<section class="benefits">
 				<div class="content">
 					<ul class="benefits__list" style="gap: 80px;">
+
 						<li class="benefits__item" style="width: 100%;">
 							<span class="benefits__num" data-speed="-100">/01</span>
-							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">WASM-compiled RAG execution</h3>
-							<p class="benefits__p">Testing the latency implications of running vector similarity search directly in the browser using WebAssembly and Rust.</p>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">WASM-Compiled RAG Execution</h3>
+							<p class="benefits__p">Testing the latency and accuracy implications of running vector similarity search directly inside a browser using WebAssembly. The core question: can client-side retrieval eliminate the server round-trip for small knowledge bases without sacrificing retrieval quality?</p>
+							<p class="benefits__p" style="margin-top: 15px;">Early results show viable latency for knowledge bases under ~10k documents. Beyond that, server-side retrieval remains necessary. The experiment surface a clear boundary that now informs when to recommend client-side vs server-side RAG architecture in production systems.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">WebAssembly · Vector Search · Cosine Similarity · Browser Performance · Retrieval Architecture</p>
 						</li>
+
 						<li class="benefits__item" style="width: 100%;">
 							<span class="benefits__num" data-speed="-100">/02</span>
-							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Edge-device LLM orchestration with Rust</h3>
-							<p class="benefits__p">Researching memory-safe orchestration pipelines that can execute securely on low-power devices.</p>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Deterministic LLM Router Architecture</h3>
+							<p class="benefits__p">An architectural prototype for routing LLM queries deterministically based on detected intent, rather than letting the model decide which tool or data source to use. The hypothesis: removing non-determinism from routing dramatically improves reliability in production AI systems.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The prototype classifies incoming queries into intent categories (structured lookup, semantic search, summarization, generation) and routes each to a pre-defined handler. This produces auditable, predictable behavior — a prerequisite for enterprise deployment where black-box decision-making is unacceptable.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Intent Detection · Query Routing · Determinism · LLM Architecture · Enterprise AI</p>
 						</li>
+
 						<li class="benefits__item" style="width: 100%;">
 							<span class="benefits__num" data-speed="-100">/03</span>
-							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Self-healing data pipelines via vector drift analysis</h3>
-							<p class="benefits__p">Architecting autonomous pipelines that detect semantic drift in ingestion streams and self-correct mapping rules.</p>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Self-Healing Data Pipelines via Semantic Drift Detection</h3>
+							<p class="benefits__p">Researching autonomous data pipelines that detect when incoming data has semantically drifted from expected patterns and self-correct their processing rules without human intervention. Traditional pipelines break silently when schemas or content patterns shift — this experiment builds a detection and correction loop.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The approach uses embedding distance monitoring between incoming data batches and a baseline corpus. When drift exceeds a threshold, the pipeline triggers a re-mapping process. Early experiments show this reduces silent data corruption in long-running ingestion jobs significantly.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Data Pipelines · Semantic Drift · Embeddings · Autonomous Systems · Ingestion Architecture</p>
 						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/04</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Role-Aware RAG Access Control Prototype</h3>
+							<p class="benefits__p">A prototype demonstrating how retrieval-augmented systems can enforce fine-grained access control at the document level, not just the API level. Standard RAG systems retrieve from a shared vector store — this approach partitions retrieval by user role, office, and permission scope before any data reaches the LLM context.</p>
+							<p class="benefits__p" style="margin-top: 15px;">Built as a middleware layer that intercepts retrieval requests, enriches them with role metadata from the auth system, and filters the vector store query accordingly. This ensures no user can receive information outside their permission boundary regardless of how they phrase their query.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">RAG · Access Control · Role-Based Security · Vector Store Filtering · Enterprise AI · Middleware</p>
+						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/05</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Edge-Device LLM Orchestration</h3>
+							<p class="benefits__p">Researching the viability of running lightweight LLM inference and orchestration logic on low-power, memory-constrained devices. The goal is understanding where AI inference can move to the edge — reducing latency, increasing privacy, and eliminating cloud dependency for certain use cases.</p>
+							<p class="benefits__p" style="margin-top: 15px;">Experiments focus on quantized model performance, memory-safe orchestration pipelines, and the trade-offs between model capability and compute constraints. Early findings indicate that routing and retrieval logic can often run at the edge effectively, even when generation must remain server-side.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Edge AI · LLM Inference · Quantization · IoT · Memory-Safe Systems · Orchestration</p>
+						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/06</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Parallax UI Architecture Experiment</h3>
+							<p class="benefits__p">A frontend engineering experiment merging two fundamentally different scroll architectures into a single unified page experience. The challenge: luxy.js uses fixed positioning and CSS transform translation for smooth scroll, while a second portfolio used native browser scrolling with IntersectionObserver and GSAP ScrollTrigger.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The solution required building a JavaScript sticky position simulator that calculates section offsets in real-time and applies counter-translations to preserve sticky behavior within the luxy.js wrapper. The result is a seamless merged scroll experience with zero layout regression — the system this website runs on.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">GSAP · luxy.js · ScrollTrigger · JavaScript · CSS Transform · Scroll Architecture · Frontend Engineering</p>
+						</li>
+
 					</ul>
+				</div>
+			</section>
+
+			<!-- Principles as serv -->
+			<section class="serv">
+				<div class="content">
+					<h2 class="section-title">lab <span class="stroke">philosophy</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<div class="serv__list">
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="500"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt"><span class="serv__item-text">/Fail fast, learn precisely</span></div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="400"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt"><span class="serv__item-text">/Test the assumption, not just the code</span></div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="600"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt"><span class="serv__item-text">/Production constraints inform experiments</span></div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="300"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt"><span class="serv__item-text">/Document the edge cases</span></div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>

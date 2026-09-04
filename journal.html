@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Anshum Dev | AI Engineer & Systems Architect</title>
+	<title>Journal — Anshum Dev | AI Engineering Notes & Architecture Thinking</title>
+	<meta name="description" content="Technical journal by Anshum Dev — articles on RAG systems, LLM architecture, FastAPI backends, deterministic AI, role-aware retrieval, and software engineering philosophy.">
 	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,31 +31,23 @@
 
 		<!-- div .header -->
 		<header class="header">
-			<h1 class="title" data-splitting><span class="title_paralax">Building Intelligent Systems </span><span class="stroke">for Real Problems.</span></h1>
+			<h1 class="title" data-splitting><span class="title_paralax">Notes on </span><span class="stroke">systems.</span></h1>
 			<div class="header__img">
-				<img src="img/1.jpg" alt="1">
+				<img src="img/7.jpg" alt="Anshum Dev Journal — Engineering Writing">
 			</div>
 			<div class="header__marq">
 				<div class="header__marq-wrapp">
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">RAG Systems
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">Architecture Thinking
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">Engineering Philosophy
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
-					<span class="header__marq-txt">Anshum Dev - AI Engineer
-						<span class="header__marq-star">
-							<img src="img/star.svg" alt="">
-						</span>
+					<span class="header__marq-txt">AI Production Systems
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
 					</span>
 				</div>
 			</div>
@@ -67,7 +60,7 @@
 						<span class="section-title__square"></span>
 					</h2>
 					<p class="about__p" style="padding-right: 0; width: 100%;">
-						Documenting the process. Thoughts on system architecture, engineering philosophy, and building better software.
+						Documenting the process. Thoughts on system architecture, AI engineering, retrieval design, and building software that holds up in production.
 					</p>
 				</div>
 			</section>
@@ -75,21 +68,71 @@
 			<section class="benefits">
 				<div class="content">
 					<ul class="benefits__list" style="gap: 80px;">
+
 						<li class="benefits__item" style="width: 100%;">
 							<span class="benefits__num" data-speed="-100">/01</span>
 							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Why your RAG pipeline is failing in production.</h3>
-							<p class="benefits__p">Most RAG implementations treat LLMs as databases. Here is why you need to decouple retrieval from generation to achieve 99% accuracy.</p>
+							<p class="benefits__p">Most RAG implementations treat the LLM as a database. They don't. Language models are generators, not retrievers — and conflating the two roles produces systems that work in demos and fail under production load. The retrieval layer must be built with the same rigor as any other data system: deterministic, auditable, and bounded.</p>
+							<p class="benefits__p" style="margin-top: 15px;">Decoupling retrieval from generation is not a performance optimization — it's an architectural requirement. When they are decoupled, each can be tested, monitored, and improved independently. When they are fused, failures are opaque and fixes are guesses.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">RAG · LLM Architecture · Production AI · Retrieval Design — 8 min read</p>
 						</li>
+
 						<li class="benefits__item" style="width: 100%;">
 							<span class="benefits__num" data-speed="-100">/02</span>
-							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">The illusion of the 10x Engineer.</h3>
-							<p class="benefits__p">A 10x engineer doesn't write 10x more code. They make 10x fewer decisions that lead to technical debt.</p>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Architecture before intelligence.</h3>
+							<p class="benefits__p">The most common failure mode in AI projects is not a bad model — it's a bad architecture. Teams spend months fine-tuning LLMs and almost no time thinking about data flow, context management, and failure modes. Intelligence layered on top of a broken architecture is still broken.</p>
+							<p class="benefits__p" style="margin-top: 15px;">Design the data boundaries first. Define what information the model is allowed to see, and under what conditions. Build the retrieval layer as if the model doesn't exist yet. Only once that foundation is solid does the model selection become a meaningful decision.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">System Design · AI Architecture · Engineering Philosophy — 6 min read</p>
 						</li>
+
 						<li class="benefits__item" style="width: 100%;">
 							<span class="benefits__num" data-speed="-100">/03</span>
-							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Transitioning from Microservices to Moduliths.</h3>
-							<p class="benefits__p">When to stop separating your services and how to build a modular monolith that actually scales without network latency.</p>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Building AI assistants around structured enterprise data.</h3>
+							<p class="benefits__p">Most enterprise data lives in SQL tables, not documents. But most AI assistant architectures are designed around unstructured text retrieval. The mismatch creates systems that can discuss documents fluently but cannot reliably answer "how many units were sold last quarter in region 3."</p>
+							<p class="benefits__p" style="margin-top: 15px;">The solution is hybrid retrieval: intent detection to classify query type, vector search for semantic/unstructured queries, SQL generation or direct lookup for structured ones. The orchestration layer decides the path — the model executes it. This produces systems that are both conversational and accurate on structured data.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Enterprise AI · SQL · Structured Data · Hybrid Retrieval · Intent Detection — 10 min read</p>
 						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/04</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Deterministic routing in AI applications.</h3>
+							<p class="benefits__p">Non-determinism is the enemy of production AI systems. When the same input can produce different behavior on different runs, debugging becomes guesswork and monitoring becomes noise. Deterministic routing — classifying intent and hard-routing to pre-defined handlers — eliminates this problem at the architectural level.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The trade-off is flexibility. A hard router cannot handle queries it was not designed for. But in enterprise contexts, this is a feature: the system should only do what it was designed to do. Graceful degradation is preferable to unpredictable hallucination.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Determinism · Query Routing · AI Systems · Production Engineering — 7 min read</p>
+						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/05</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Lessons from building FastAPI-based AI backends.</h3>
+							<p class="benefits__p">FastAPI is an excellent foundation for AI service backends — async-native, type-safe, and fast enough for most AI workloads. But the architectural decisions that matter most have nothing to do with FastAPI itself: they are about how you structure data flow between the API layer, retrieval layer, and model layer.</p>
+							<p class="benefits__p" style="margin-top: 15px;">Key lessons: keep the model call at the very end of the request pipeline, not in the middle. Design the API contract to return structured objects, not raw model text. Build middleware for auth, rate limiting, and logging before the model sees any data. Treat the LLM as an implementation detail of a larger system.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">FastAPI · Python · AI Backend · API Design · Middleware · Production Engineering — 9 min read</p>
+						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/06</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">What I learned experimenting with WebAssembly RAG.</h3>
+							<p class="benefits__p">Running vector similarity search in a browser using WebAssembly is not a production architecture — but it is a clarifying experiment. It forces you to think precisely about what retrieval actually costs, where the bottlenecks are, and what a "small" knowledge base actually means in computational terms.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The most useful insight: the embedding computation is the expensive part, not the similarity search. Pre-computing embeddings server-side and shipping them to the client is viable. Running the encoder in-browser is not. This changes how you think about edge AI architecture for retrieval tasks.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">WebAssembly · Vector Search · Retrieval Architecture · Browser Performance · Edge AI — 7 min read</p>
+						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/07</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">Designing role-aware AI systems.</h3>
+							<p class="benefits__p">Role-based access control is a solved problem in traditional software. In AI systems, it is almost universally ignored. The result: AI assistants that inadvertently reveal cross-department data because no one designed retrieval boundaries into the system.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The correct approach is to enforce access boundaries at the retrieval layer, not the API layer. The model should never receive context it is not permitted to have. Role filtering must happen before the vector store query, not after. Building this as middleware — rather than bolting it on after deployment — is what separates production AI from a proof of concept.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Access Control · RAG · Enterprise Security · Role-Based Systems · AI Architecture — 8 min read</p>
+						</li>
+
+						<li class="benefits__item" style="width: 100%;">
+							<span class="benefits__num" data-speed="-100">/08</span>
+							<h3 style="font-size: 30px; color: var(--pr-color); margin-bottom: 20px;">The illusion of the 10x engineer.</h3>
+							<p class="benefits__p">A 10x engineer does not write 10x more code. They make 10x fewer decisions that lead to technical debt. The difference between a senior and junior engineer is not output volume — it is the ability to recognize which problems are not worth solving, which abstractions will create more complexity than they remove, and which "clever" solutions will become someone else's debugging nightmare at 2am.</p>
+							<p class="benefits__p" style="margin-top: 15px;">The best engineers I have worked alongside share one quality: they default to the simplest solution that could possibly work, and they are deeply suspicious of any solution that requires cleverness to understand. Complexity is a cost, not an achievement.</p>
+							<p class="benefits__p" style="margin-top: 15px; color: #6a6a6a;">Engineering Philosophy · Software Design · Technical Debt · Simplicity — 5 min read</p>
+						</li>
+
 					</ul>
 				</div>
 			</section>
