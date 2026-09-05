@@ -132,9 +132,11 @@ section {
 .title {
 	position: relative;
 	margin: 0;
-	font-size: 85px;
+	font-size: clamp(42px, 5.5vw, 72px);
 	text-align: left;
 	max-width: 55%;
+	word-break: keep-all;
+	overflow-wrap: normal;
 	color: var(--pr-color);
 	text-transform: uppercase;
 	mix-blend-mode: difference;
