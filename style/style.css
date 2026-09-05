@@ -78,7 +78,7 @@ section {
 	position: relative;
 	display: flex;
 	padding: 0 70px;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
 	height: 100vh;
@@ -133,7 +133,8 @@ section {
 	position: relative;
 	margin: 0;
 	font-size: 85px;
-	text-align: center;
+	text-align: left;
+	max-width: 55%;
 	color: var(--pr-color);
 	text-transform: uppercase;
 	mix-blend-mode: difference;
@@ -153,10 +154,10 @@ section {
 
 .header__img {
 	position: absolute;
-	width: 45%;
+	width: 52%;
 	height: 100%;
 	top: 0;
-	right: 100px;
+	right: 0;
 	clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 	overflow: hidden;
 }
